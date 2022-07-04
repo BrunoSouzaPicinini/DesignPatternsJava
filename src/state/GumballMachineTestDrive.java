@@ -3,38 +3,44 @@ package state;
 public class GumballMachineTestDrive {
 
     public static void main(String[] args) {
-        var gumballMachine = new GumBallMachineImpl(5);
+        var gumballMachine = new GumBallMachine(5);
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertsQuarter();
-        gumballMachine.turnCrank();
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertsQuarter();
-        gumballMachine.ejectsQuarter();
+        gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertsQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertsQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.ejectsQuarter();
-
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertsQuarter();
-        gumballMachine.insertsQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertsQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertsQuarter();
+        gumballMachine.insertQuarter();
+        gumballMachine.ejectQuarter();
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
+
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.ejectQuarter();
+
+        System.out.println(gumballMachine);
+
+        gumballMachine.insertQuarter();
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+
+        System.out.println(gumballMachine);
+
+        gumballMachine.refill(1);
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
+        gumballMachine.insertQuarter();
+        gumballMachine.turnCrank();
 
     }
 }

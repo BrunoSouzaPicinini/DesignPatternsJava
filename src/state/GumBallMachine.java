@@ -1,0 +1,95 @@
+package state;
+
+public class GumBallMachine {
+
+    State soldOutState;
+    State noQuarterState;
+    State hasQuarterState;
+    State soldState;
+    State state;
+    int count;
+
+    public GumBallMachine(int numberGumballs) {
+        soldOutState = new SoldOutState(this);
+        noQuarterState = new NoQuarterState(this);
+        hasQuarterState = new HasQuarterState(this);
+        soldState = new SoldState(this);
+        this.count = numberGumballs;
+        state = soldOutState;
+        if (numberGumballs > 0) {
+            state = noQuarterState;
+        }
+    }
+
+    public void insertQuarter() {
+        state.insertQuarter();
+    }
+
+    public void turnCrank() {
+        state.turnCrank();
+        state.dispense();
+    }
+
+    public void ejectQuarter() {
+        state.ejectQuarter();
+    }
+
+    public void setState(final State state) {
+        this.state = state;
+    }
+
+    void releaseBall() {
+        System.out.println("A gumball comes rolling out the slot...");
+        if (count != 0) {
+            count--;
+        }
+    }
+
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
+
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+
+    public State getSoldState() {
+        return soldState;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void addGumballs(final int gumballs) {
+        System.out.println(gumballs + " gumball(s) added");
+        count += gumballs;
+    }
+
+    public void refill(int gumballs) {
+        if(gumballs < 0) {
+            System.out.println("No gumballs to refill");
+            return;
+        }
+
+        addGumballs(gumballs);
+        setState(getNoQuarterState());
+    }
+
+    @Override
+    public String toString() {
+        return "GumBallMachine{" +
+            "state=" + state +
+            ", count=" + count +
+            '}';
+    }
+
+}
