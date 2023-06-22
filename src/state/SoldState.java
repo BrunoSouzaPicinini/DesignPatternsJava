@@ -19,6 +19,10 @@ public class SoldState implements State{
         System.out.println("Turning twice doesn't get you another gumball");
     }
 
+    public void refill(int gumballs) {
+        System.out.println("You can't refill now");
+    }
+
     public void dispense() {
         gumBallMachine.releaseBall();
         if( gumBallMachine.getCount() > 0) {

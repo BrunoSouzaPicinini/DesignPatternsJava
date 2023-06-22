@@ -42,5 +42,13 @@ public class GumballMachineTestDrive {
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
 
+        gumballMachine.refill(2);
+        gumballMachine.insertQuarter();
+        gumballMachine.refill(3);
+        gumballMachine.turnCrank();
+        gumballMachine.refill(4);
+
+        System.out.println(gumballMachine);
+
     }
 }

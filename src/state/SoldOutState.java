@@ -19,6 +19,16 @@ public class SoldOutState implements State{
         System.out.println("You turned, but there are no gumballs");
     }
 
+    public void refill(int gumballs) {
+        if(gumballs < 0) {
+            System.out.println("No gumballs to refill");
+            return;
+        }
+
+        gumBallMachine.addGumballs(gumballs);
+        gumBallMachine.setState(gumBallMachine.getNoQuarterState());
+    }
+
     public void dispense() {
         System.out.println("No gumball dispensed");
     }

@@ -34,6 +34,10 @@ public class HasQuarterState implements State{
         System.out.println("No gumball dispensed");
     }
 
+    public void refill(int gumballs) {
+        System.out.println("You can't refill now");
+    }
+
     @Override
     public String toString() {
         return "Has Quarter";

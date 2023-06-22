@@ -35,4 +35,7 @@ public class WinnerState implements State{
         }
     }
 
+    public void refill(int gumballs) {
+        System.out.println("You can't refill now");
+    }
 }

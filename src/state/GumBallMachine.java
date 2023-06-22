@@ -77,13 +77,7 @@ public class GumBallMachine {
     }
 
     public void refill(int gumballs) {
-        if(gumballs < 0) {
-            System.out.println("No gumballs to refill");
-            return;
-        }
-
-        addGumballs(gumballs);
-        setState(getNoQuarterState());
+        state.refill(gumballs);
     }
 
     @Override

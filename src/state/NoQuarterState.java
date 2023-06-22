@@ -24,6 +24,15 @@ public class NoQuarterState implements State{
         System.out.println("You need to pay first");
     }
 
+    public void refill(int gumballs) {
+        if(gumballs < 0) {
+            System.out.println("No gumballs to refill");
+            return;
+        }
+
+        gumBallMachine.addGumballs(gumballs);
+    }
+
     @Override
     public String toString() {
         return "No Quarter";
