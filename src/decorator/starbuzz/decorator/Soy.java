@@ -1,6 +1,6 @@
-package decorate;
+package decorator.starbuzz.decorator;
 
-import decorate.model.Beverage;
+import decorator.starbuzz.model.Beverage;
 
 public class Soy extends CondimentDecorator {
 
@@ -15,7 +15,11 @@ public class Soy extends CondimentDecorator {
         }
 
         public double cost() {
-            return 0.15d + beverage.cost();
+            return switch (beverage.getSize()) {
+                case VENTI -> 0.15d + beverage.cost();
+                case GRANDE -> 0.12d + beverage.cost();
+                default -> 0.10d + beverage.cost();
+            };
         }
 
 }

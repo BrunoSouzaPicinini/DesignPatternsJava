@@ -1,4 +1,4 @@
-package decorate.inputstream;
+package decorator.inputstream;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

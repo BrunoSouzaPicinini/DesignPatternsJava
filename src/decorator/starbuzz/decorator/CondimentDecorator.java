@@ -1,10 +1,8 @@
-package decorate;
+package decorator.starbuzz.decorator;
 
-import decorate.model.Beverage;
+import decorator.starbuzz.model.Beverage;
 
 public abstract class CondimentDecorator extends Beverage {
-
-        Beverage beverage;
 
         public abstract String getDescription();
 

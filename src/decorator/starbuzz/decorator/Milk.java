@@ -1,6 +1,6 @@
-package decorate;
+package decorator.starbuzz.decorator;
 
-import decorate.model.Beverage;
+import decorator.starbuzz.model.Beverage;
 
 public class Milk extends CondimentDecorator {
     Beverage beverage;

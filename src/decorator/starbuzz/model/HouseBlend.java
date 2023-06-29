@@ -1,4 +1,4 @@
-package decorate.model;
+package decorator.starbuzz.model;
 
 public class HouseBlend extends Beverage {
 
