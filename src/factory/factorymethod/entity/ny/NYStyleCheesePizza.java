@@ -1,4 +1,4 @@
-package factory.entity.ny;
+package factory.factorymethod.entity.ny;
 
 public class NYStyleCheesePizza extends NYStylePizza {
 

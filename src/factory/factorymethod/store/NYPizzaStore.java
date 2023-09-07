@@ -1,10 +1,10 @@
-package factory.store;
+package factory.factorymethod.store;
 
-import factory.entity.*;
-import factory.entity.ny.NYStyleCheesePizza;
-import factory.entity.ny.NYStyleClamPizza;
-import factory.entity.ny.NYStylePepperoniPizza;
-import factory.entity.ny.NYStyleVeggiePizza;
+import factory.factorymethod.entity.*;
+import factory.factorymethod.entity.ny.NYStyleCheesePizza;
+import factory.factorymethod.entity.ny.NYStyleClamPizza;
+import factory.factorymethod.entity.ny.NYStylePepperoniPizza;
+import factory.factorymethod.entity.ny.NYStyleVeggiePizza;
 
 public class NYPizzaStore extends PizzaStore {
 

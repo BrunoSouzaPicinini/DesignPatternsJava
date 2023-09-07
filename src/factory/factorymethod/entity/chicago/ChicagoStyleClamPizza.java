@@ -1,4 +1,4 @@
-package factory.entity.chicago;
+package factory.factorymethod.entity.chicago;
 
 public class ChicagoStyleClamPizza extends ChicagoStylePizza {
 

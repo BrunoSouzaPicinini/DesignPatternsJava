@@ -1,9 +1,9 @@
-package factory;
+package factory.factorymethod;
 
-import factory.entity.Pizza;
-import factory.store.ChicagoPizzaStore;
-import factory.store.NYPizzaStore;
-import factory.store.PizzaStore;
+import factory.factorymethod.entity.Pizza;
+import factory.factorymethod.store.ChicagoPizzaStore;
+import factory.factorymethod.store.NYPizzaStore;
+import factory.factorymethod.store.PizzaStore;
 
 public class Main {
 

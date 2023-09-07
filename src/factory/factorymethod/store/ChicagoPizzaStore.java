@@ -1,10 +1,10 @@
-package factory.store;
+package factory.factorymethod.store;
 
-import factory.entity.*;
-import factory.entity.chicago.ChicagoStyleCheesePizza;
-import factory.entity.chicago.ChicagoStyleClamPizza;
-import factory.entity.chicago.ChicagoStylePepperoniPizza;
-import factory.entity.chicago.ChicagoStyleVeggiePizza;
+import factory.factorymethod.entity.*;
+import factory.factorymethod.entity.chicago.ChicagoStyleCheesePizza;
+import factory.factorymethod.entity.chicago.ChicagoStyleClamPizza;
+import factory.factorymethod.entity.chicago.ChicagoStylePepperoniPizza;
+import factory.factorymethod.entity.chicago.ChicagoStyleVeggiePizza;
 
 public class ChicagoPizzaStore extends PizzaStore {
     @Override

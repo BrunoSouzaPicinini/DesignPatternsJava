@@ -1,6 +1,6 @@
-package factory.entity.ny;
+package factory.factorymethod.entity.ny;
 
-import factory.entity.Pizza;
+import factory.factorymethod.entity.Pizza;
 
 public abstract class NYStylePizza extends Pizza {
 

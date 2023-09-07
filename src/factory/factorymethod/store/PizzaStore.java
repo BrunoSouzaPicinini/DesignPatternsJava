@@ -1,6 +1,6 @@
-package factory.store;
+package factory.factorymethod.store;
 
-import factory.entity.Pizza;
+import factory.factorymethod.entity.Pizza;
 
 public abstract class PizzaStore {
 

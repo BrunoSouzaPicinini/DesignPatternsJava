@@ -1,4 +1,4 @@
-package factory.entity;
+package factory.factorymethod.entity;
 
 import java.util.ArrayList;
 
