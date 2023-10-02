@@ -1,4 +1,4 @@
-package factory.abstractfactory.entity.ingredient;
+package factory.abstractfactory.entity.ingredients;
 
 public class SlicedPepperoni extends Pepperoni {
     public SlicedPepperoni() {

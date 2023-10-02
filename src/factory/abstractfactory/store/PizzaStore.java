@@ -1,7 +1,7 @@
 package factory.abstractfactory.store;
 
-import factory.abstractfactory.entity.pizza.Pizza;
-import factory.abstractfactory.entity.pizza.PizzaTypeEnum;
+import factory.abstractfactory.entity.pizzas.Pizza;
+import factory.abstractfactory.entity.pizzas.PizzaTypeEnum;
 
 public abstract class PizzaStore {
 

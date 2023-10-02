@@ -1,6 +1,6 @@
-package factory.abstractfactory.entity.pizza;
+package factory.abstractfactory.entity.pizzas;
 
-import factory.abstractfactory.entity.ingredient.*;
+import factory.abstractfactory.entity.ingredients.*;
 
 import java.util.ArrayList;
 import java.util.List;

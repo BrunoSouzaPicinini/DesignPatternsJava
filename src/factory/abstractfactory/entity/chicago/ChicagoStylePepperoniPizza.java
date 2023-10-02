@@ -1,6 +1,6 @@
 package factory.abstractfactory.entity.chicago;
 
-import factory.abstractfactory.entity.pizza.PepperoniPizza;
+import factory.abstractfactory.entity.pizzas.PepperoniPizza;
 import factory.abstractfactory.ingredient.PizzaIngredientFactory;
 
 public class ChicagoStylePepperoniPizza extends PepperoniPizza {

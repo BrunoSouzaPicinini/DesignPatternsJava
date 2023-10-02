@@ -1,4 +1,4 @@
-package factory.abstractfactory.entity.ingredient;
+package factory.abstractfactory.entity.ingredients;
 
 public class FrozenClams extends Clam {
     public FrozenClams() {

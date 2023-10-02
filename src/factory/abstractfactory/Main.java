@@ -1,7 +1,7 @@
 package factory.abstractfactory;
 
-import factory.abstractfactory.entity.pizza.Pizza;
-import factory.abstractfactory.entity.pizza.PizzaTypeEnum;
+import factory.abstractfactory.entity.pizzas.Pizza;
+import factory.abstractfactory.entity.pizzas.PizzaTypeEnum;
 import factory.abstractfactory.store.ChicagoPizzaStore;
 import factory.abstractfactory.store.NYPizzaStore;
 import factory.abstractfactory.store.PizzaStore;

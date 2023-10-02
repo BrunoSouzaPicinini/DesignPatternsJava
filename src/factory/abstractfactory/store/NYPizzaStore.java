@@ -4,8 +4,8 @@ import factory.abstractfactory.entity.ny.NYStyleCheesePizza;
 import factory.abstractfactory.entity.ny.NYStyleClamPizza;
 import factory.abstractfactory.entity.ny.NYStylePepperoniPizza;
 import factory.abstractfactory.entity.ny.NYStyleVeggiePizza;
-import factory.abstractfactory.entity.pizza.Pizza;
-import factory.abstractfactory.entity.pizza.PizzaTypeEnum;
+import factory.abstractfactory.entity.pizzas.Pizza;
+import factory.abstractfactory.entity.pizzas.PizzaTypeEnum;
 import factory.abstractfactory.ingredient.NYPizzaIngredientFactory;
 
 public class NYPizzaStore extends PizzaStore {

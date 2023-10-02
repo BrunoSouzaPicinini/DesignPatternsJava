@@ -1,4 +1,4 @@
-package factory.abstractfactory.entity.pizza;
+package factory.abstractfactory.entity.pizzas;
 
 import factory.abstractfactory.ingredient.PizzaIngredientFactory;
 

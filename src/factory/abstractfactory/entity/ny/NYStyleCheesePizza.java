@@ -1,6 +1,6 @@
 package factory.abstractfactory.entity.ny;
 
-import factory.abstractfactory.entity.pizza.CheesePizza;
+import factory.abstractfactory.entity.pizzas.CheesePizza;
 import factory.abstractfactory.ingredient.PizzaIngredientFactory;
 
 public class NYStyleCheesePizza extends CheesePizza {

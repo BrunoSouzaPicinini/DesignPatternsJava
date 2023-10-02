@@ -1,7 +1,7 @@
 package factory.abstractfactory.ingredient;
 
-import factory.abstractfactory.entity.ingredient.*;
-import factory.abstractfactory.entity.ingredient.Spinach;
+import factory.abstractfactory.entity.ingredients.*;
+import factory.abstractfactory.entity.ingredients.Spinach;
 
 import java.util.List;
 

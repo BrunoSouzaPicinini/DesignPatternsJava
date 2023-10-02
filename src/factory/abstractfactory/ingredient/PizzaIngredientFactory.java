@@ -1,6 +1,6 @@
 package factory.abstractfactory.ingredient;
 
-import factory.abstractfactory.entity.ingredient.*;
+import factory.abstractfactory.entity.ingredients.*;
 
 import java.util.List;
 
