@@ -38,18 +38,45 @@ public class RemoteLoader {
         remoteControl.setCommand(3, stereoOnWithCD, stereoOff);
         remoteControl.setCommand(4, garageDoorOpen, garageDoorClose);
 
+        System.out.println("First scenario: all buttons were pushed.");
+
         System.out.println(remoteControl);
+        remoteControl.leftButtonWasPushed(0);
+        remoteControl.rightButtonWasPushed(0);
+        remoteControl.leftButtonWasPushed(1);
+        remoteControl.rightButtonWasPushed(1);
+        remoteControl.leftButtonWasPushed(2);
+        remoteControl.rightButtonWasPushed(2);
+        remoteControl.leftButtonWasPushed(3);
+        remoteControl.rightButtonWasPushed(3);
+        remoteControl.leftButtonWasPushed(4);
+        remoteControl.rightButtonWasPushed(4);
 
-        remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWasPushed(0);
-        remoteControl.onButtonWasPushed(1);
-        remoteControl.offButtonWasPushed(1);
-        remoteControl.onButtonWasPushed(2);
-        remoteControl.offButtonWasPushed(2);
-        remoteControl.onButtonWasPushed(3);
-        remoteControl.offButtonWasPushed(3);
-        remoteControl.onButtonWasPushed(4);
-        remoteControl.offButtonWasPushed(4);
+        System.out.println("\nSecond scenario: undo button was pushed.");
 
+        remoteControl.leftButtonWasPushed(0);
+        remoteControl.rightButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
+        remoteControl.rightButtonWasPushed(0);
+        remoteControl.leftButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
+
+        System.out.println("\nThird scenario: set speed of ceiling fan.");
+        var ceilingFanIncreaseSpeed = new CeilingFanIncreaseSpeedCommand(ceilingFan);
+        var ceilingFanDecreaseSpeed = new CeilingFanDecreaseSpeedCommand(ceilingFan);
+        remoteControl.setCommand(5, ceilingFanIncreaseSpeed, ceilingFanDecreaseSpeed);
+
+        remoteControl.leftButtonWasPushed(5);
+        remoteControl.leftButtonWasPushed(5);
+        remoteControl.leftButtonWasPushed(5);
+        remoteControl.leftButtonWasPushed(5);
+        remoteControl.rightButtonWasPushed(5);
+        remoteControl.rightButtonWasPushed(5);
+        remoteControl.rightButtonWasPushed(5);
+        remoteControl.rightButtonWasPushed(5);
+        remoteControl.leftButtonWasPushed(5);
+        remoteControl.rightButtonWasPushed(5);
     }
 }

@@ -4,40 +4,49 @@ import command.command.Command;
 import command.command.NoCommand;
 
 public class RemoteControl {
-    Command[] onCommands;
-    Command[] offCommands;
+    Command[] leftCommands;
+    Command[] rightCommands;
+    Command undoCommand;
 
     public RemoteControl() {
-        onCommands = new Command[7];
-        offCommands = new Command[7];
+        leftCommands = new Command[7];
+        rightCommands = new Command[7];
 
         Command noCommand = new NoCommand();
         for (int i = 0; i < 7; i++) {
-            onCommands[i] = noCommand;
-            offCommands[i] = noCommand;
+            leftCommands[i] = noCommand;
+            rightCommands[i] = noCommand;
         }
+        undoCommand = noCommand;
     }
 
-    public void setCommand(int slot, Command onCommand, Command offCommand) {
-        onCommands[slot] = onCommand;
-        offCommands[slot] = offCommand;
+    public void setCommand(int slot, Command leftCommand, Command rightCommand) {
+        leftCommands[slot] = leftCommand;
+        rightCommands[slot] = rightCommand;
     }
 
-    public void onButtonWasPushed(int slot) {
-        onCommands[slot].execute();
+    public void leftButtonWasPushed(int slot) {
+        leftCommands[slot].execute();
+        undoCommand = leftCommands[slot];
     }
 
-    public void offButtonWasPushed(int slot) {
-        offCommands[slot].execute();
+    public void rightButtonWasPushed(int slot) {
+        rightCommands[slot].execute();
+        undoCommand = rightCommands[slot];
+    }
+
+    public void undoButtonWasPushed() {
+        undoCommand.undo();
     }
 
     @Override
     public String toString() {
         StringBuffer stringBuff = new StringBuffer();
         stringBuff.append("\n------ Remote Control ------\n");
-        for (int i = 0; i < onCommands.length; i++) {
-            stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName() + "    " + offCommands[i].getClass().getName() + "\n");
+        for (int i = 0; i < leftCommands.length; i++) {
+            stringBuff.append("[slot " + i + "] " + leftCommands[i].getClass().getName() + "    " + rightCommands[i].getClass().getName() + "\n");
         }
+        stringBuff.append("[undo] " + undoCommand.getClass().getName() + "\n");
         return stringBuff.toString();
     }
 

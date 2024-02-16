@@ -2,7 +2,6 @@ package command;
 
 import command.command.GarageDoorOpenCommand;
 import command.command.LightOnCommand;
-import command.invoker.RemoteControl;
 import command.invoker.SimpleRemoteControl;
 import command.receiver.GarageDoor;
 import command.receiver.Light;
@@ -20,8 +19,5 @@ public class MainClient {
         var garageDoorOpen = new GarageDoorOpenCommand(new GarageDoor(""));
         simpleUniversalRemoteControl.setCommand(garageDoorOpen);
         simpleUniversalRemoteControl.buttonWasPressed();
-
-
-        var remoteControl = new RemoteControl();
     }
 }
