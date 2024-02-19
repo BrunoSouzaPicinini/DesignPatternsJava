@@ -78,5 +78,15 @@ public class RemoteLoader {
         remoteControl.rightButtonWasPushed(5);
         remoteControl.leftButtonWasPushed(5);
         remoteControl.rightButtonWasPushed(5);
+
+        System.out.println("\nFourth scenario: macro commands.");
+        Command[] allOn = {livingRoomLightON, kitchenLightON, ceilingFanON, stereoOnWithCD};
+        Command[] allOff = {livingRoomLightOFF, kitchenLightOFF, ceilingFanOFF, stereoOff};
+
+        MacroCommand macroAllOn = new MacroCommand(allOn);
+        MacroCommand macroAllOff = new MacroCommand(allOff);
+        remoteControl.setCommand(6, macroAllOn, macroAllOff);
+        remoteControl.leftButtonWasPushed(6);
+        remoteControl.rightButtonWasPushed(6);
     }
 }
