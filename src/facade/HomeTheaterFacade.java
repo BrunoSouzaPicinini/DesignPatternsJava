@@ -2,7 +2,7 @@ package facade;
 
 public class HomeTheaterFacade {
     private Amplifier amplifier;
-    private Tuner tuner;
+
     private DvdPlayer dvdPlayer;
     private CdPlayer cdPlayer;
     private Projector projector;
@@ -10,9 +10,8 @@ public class HomeTheaterFacade {
     private Screen screen;
     private PopcornPopper popcornPopper;
 
-    public HomeTheaterFacade(Amplifier amplifier, Tuner tuner, DvdPlayer dvdPlayer, CdPlayer cdPlayer, Projector projector, TheaterLights theaterLights, Screen screen, PopcornPopper popcornPopper) {
+    public HomeTheaterFacade(Amplifier amplifier, DvdPlayer dvdPlayer, CdPlayer cdPlayer, Projector projector, TheaterLights theaterLights, Screen screen, PopcornPopper popcornPopper) {
         this.amplifier = amplifier;
-        this.tuner = tuner;
         this.dvdPlayer = dvdPlayer;
         this.cdPlayer = cdPlayer;
         this.projector = projector;
@@ -32,6 +31,7 @@ public class HomeTheaterFacade {
         amplifier.setDvd(dvdPlayer);
         amplifier.setSurroundSound();
         amplifier.setVolume(5);
+        cdPlayer.on();    
         dvdPlayer.on();
         dvdPlayer.play("Movie");
     }
@@ -42,6 +42,7 @@ public class HomeTheaterFacade {
         screen.up();
         projector.off();
         amplifier.off();
+        cdPlayer.off();
         dvdPlayer.stop();
         dvdPlayer.eject();
         dvdPlayer.off();

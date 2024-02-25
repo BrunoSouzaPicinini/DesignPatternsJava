@@ -3,8 +3,7 @@ package facade;
 public class Main {
     public static void main(String[] args) {
         var homeTheaterFacade = new HomeTheaterFacade(
-                new Amplifier(),
-                new Tuner(),
+                new Amplifier(),            
                 new DvdPlayer(),
                 new CdPlayer(),
                 new Projector(),
