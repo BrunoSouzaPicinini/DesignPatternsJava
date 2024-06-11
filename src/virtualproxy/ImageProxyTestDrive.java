@@ -3,6 +3,7 @@ package virtualproxy;
 import java.net.URI;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import javax.swing.*;
 
@@ -19,7 +20,7 @@ public class ImageProxyTestDrive {
     }
 
     public ImageProxyTestDrive() throws Exception{
-        cds.put("Buddha Bar","http://images.amazon.com/images/P/B00009XBYK.01.LZZZZZZZ.jpg");
+        cds.put("Ambient: Music for Airports","http://images.amazon.com/images/P/B000003S2K.01.LZZZZZZZ.jpg");
 	    cds.put("Ima","http://images.amazon.com/images/P/B000005IRM.01.LZZZZZZZ.jpg");
 	    cds.put("Karma","http://images.amazon.com/images/P/B000005DCB.01.LZZZZZZZ.gif");
 	    cds.put("MCMXC a.D.","http://images.amazon.com/images/P/B000002URV.01.LZZZZZZZ.jpg");
@@ -32,8 +33,9 @@ public class ImageProxyTestDrive {
         menuBar.add(menu);
         frame.setJMenuBar(menuBar);
 
-        for (Object name : cds.keySet()) {
-            JMenuItem menuItem = new JMenuItem((String)name);
+        for(Iterator<String> e = cds.keySet().iterator(); e.hasNext();) {
+            String key = e.next();
+            JMenuItem menuItem = new JMenuItem(key);
             menu.add(menuItem);
             menuItem.addActionListener(event -> {
                 var imageProxy = new ImageProxy(getCDUrl(event.getActionCommand()));
