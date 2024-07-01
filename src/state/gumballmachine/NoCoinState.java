@@ -1,23 +1,23 @@
-package state;
+package state.gumballmachine;
 
-public class NoQuarterState implements State{
+public class NoCoinState implements State{
     GumBallMachine gumBallMachine;
 
-    public NoQuarterState(final GumBallMachine gumBallMachine) {
+    public NoCoinState(final GumBallMachine gumBallMachine) {
         this.gumBallMachine = gumBallMachine;
     }
 
-    public void insertQuarter() {
-        System.out.println("You inserted a quarter");
-        gumBallMachine.setState(gumBallMachine.getHasQuarterState());
+    public void insertCoin() {
+        System.out.println("You inserted a coin");
+        gumBallMachine.setState(gumBallMachine.getHasCoinState());
     }
 
-    public void ejectQuarter() {
-        System.out.println("You haven't inserted a quarter");
+    public void ejectCoin() {
+        System.out.println("You haven't inserted a coin");
     }
 
     public void turnCrank() {
-        System.out.println("You turned, but there's no quarter");
+        System.out.println("You turned, but there's no coin");
     }
 
     public void dispense() {
@@ -35,7 +35,7 @@ public class NoQuarterState implements State{
 
     @Override
     public String toString() {
-        return "No Quarter";
+        return "No Coin";
     }
 
 }

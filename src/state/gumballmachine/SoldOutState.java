@@ -1,4 +1,4 @@
-package state;
+package state.gumballmachine;
 
 public class SoldOutState implements State{
     GumBallMachine gumBallMachine;
@@ -7,12 +7,12 @@ public class SoldOutState implements State{
         this.gumBallMachine = gumBallMachine;
     }
 
-    public void insertQuarter() {
-        System.out.println("You can't insert a quarter, the machine is sold out");
+    public void insertCoin() {
+        System.out.println("You can't insert a coin, the machine is sold out");
     }
 
-    public void ejectQuarter() {
-        System.out.println("You can't eject, you haven't inserted a quarter yet");
+    public void ejectCoin() {
+        System.out.println("You can't eject, you haven't inserted a coin yet");
     }
 
     public void turnCrank() {
@@ -26,7 +26,7 @@ public class SoldOutState implements State{
         }
 
         gumBallMachine.addGumballs(gumballs);
-        gumBallMachine.setState(gumBallMachine.getNoQuarterState());
+        gumBallMachine.setState(gumBallMachine.getNoCoinState());
     }
 
     public void dispense() {

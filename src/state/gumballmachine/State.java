@@ -1,9 +1,9 @@
-package state;
+package state.gumballmachine;
 
 public interface State {
 
-    void insertQuarter();
-    void ejectQuarter();
+    void insertCoin();
+    void ejectCoin();
     void turnCrank();
     void dispense();
     void refill(int gumballs);

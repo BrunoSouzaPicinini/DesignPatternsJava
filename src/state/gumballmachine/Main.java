@@ -1,4 +1,4 @@
-package state;
+package state.gumballmachine;
 
 public class Main {
 
@@ -7,43 +7,43 @@ public class Main {
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.ejectQuarter();
+        gumballMachine.insertCoin();
+        gumballMachine.ejectCoin();
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
-        gumballMachine.ejectQuarter();
+        gumballMachine.ejectCoin();
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
 
         gumballMachine.refill(1);
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.turnCrank();
 
         gumballMachine.refill(2);
-        gumballMachine.insertQuarter();
+        gumballMachine.insertCoin();
         gumballMachine.refill(3);
         gumballMachine.turnCrank();
         gumballMachine.refill(4);

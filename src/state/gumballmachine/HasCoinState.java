@@ -1,23 +1,23 @@
-package state;
+package state.gumballmachine;
 
 import java.util.Random;
 
-public class HasQuarterState implements State{
+public class HasCoinState implements State{
     Random randomWinner = new Random(System.currentTimeMillis());
 
     GumBallMachine gumBallMachine;
 
-    public HasQuarterState(final GumBallMachine gumBallMachine) {
+    public HasCoinState(final GumBallMachine gumBallMachine) {
         this.gumBallMachine = gumBallMachine;
     }
 
-    public void insertQuarter() {
-        System.out.println("You can't insert another quarter");
+    public void insertCoin() {
+        System.out.println("You can't insert another coin");
     }
 
-    public void ejectQuarter() {
+    public void ejectCoin() {
         System.out.println("Quarter returned");
-        gumBallMachine.setState(gumBallMachine.getNoQuarterState());
+        gumBallMachine.setState(gumBallMachine.getNoCoinState());
     }
 
     public void turnCrank() {
@@ -40,7 +40,7 @@ public class HasQuarterState implements State{
 
     @Override
     public String toString() {
-        return "Has Quarter";
+        return "Has Coin";
     }
 
 }
