@@ -25,7 +25,7 @@ public class Main {
 
         performBehaviorsOfAllDucks(ducks);
 
-        FlyBehavior flyWithAJetpack = () -> System.out.println("Voando com um jato particular");
+        FlyBehavior flyWithAJetpack = () -> System.out.println("Fly with a jetpack");
         mallard.setFlyBehavior(flyWithAJetpack);
         redhead.setFlyBehavior(flyWithAJetpack);
         rubber.setFlyBehavior(flyWithAJetpack);

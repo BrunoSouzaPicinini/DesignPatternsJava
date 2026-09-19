@@ -11,6 +11,6 @@ public class RedheadDuck extends Duck {
 
     @Override
     public void display() {
-        System.out.println("Parece um pato ruivo");
+        System.out.println("Looks like a readhead");
     }
 }
