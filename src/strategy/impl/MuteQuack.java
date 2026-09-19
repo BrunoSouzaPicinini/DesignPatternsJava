@@ -5,6 +5,6 @@ import strategy.interfaces.QuackBehavior;
 public class MuteQuack implements QuackBehavior {
     @Override
     public void quack() {
-        System.out.println("Can't quack!");
+        System.out.println("¡No puede hacer cuac!");
     }
 }
